@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #172330;
+  --surface: #223343;
+  --foreground: #f1ede5;
+  --muted: #b0bbc3;
+  --accent: #c8ae88;
+  --border: #3b4c5a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-inter, Arial, sans-serif);
+  --font-serif: var(--font-cormorant, Georgia, serif);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    145deg,
+    #172330 0%,
+    #243b4b 50%,
+    #172330 100%
+  );
+  color: var(--foreground);
+  font-family: var(--font-inter, Arial, sans-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.tempa-panel {
+  background: linear-gradient(
+    135deg,
+    #304858 0%,
+    #223343 55%,
+    #1b2c39 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
